@@ -1,0 +1,144 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+width: 100%;
+height: 100vh;
+}
+.code-editor-container{
+background: rgb(12, 17, 20);
+width: 100%;
+height: 70vh;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+gap: 20px;
+padding: 20px;
+overflow: auto;
+/* position: relative; */
+}
+.code-editor{
+width: 450px;
+height: 450px;
+background:  rgb(12, 17, 20);
+box-shadow: 2px  2px 20px black;
+border: 2px solid rgba(255, 255, 255, 0.105);
+border-radius: 20px;
+overflow: auto;
+position: relative;
+}
+.head-editor{
+width: 100%;
+height: 60px;
+background: rgb(12, 17, 20);
+box-shadow: 2px  2px 20px black;
+border-radius: 0px 0px 30px 30px;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.left-head{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.left-head span{
+color: rgb(245, 220, 220);
+text-transform: uppercase;
+font-size: 20px;
+}
+.right-head img{
+/* color: rgb(179, 166, 166); */
+font-size: 25px;
+transition: all 0.5s ease-in-out;
+}
+.right-head img:hover{
+/* color: rgb(233, 226, 226); */
+font-size: 20px;
+scale: 150%;
+cursor: pointer;
+}
+
+.code-editor textarea{
+ width: 100%;
+height: calc(100% - 80px);
+background: rgb(12, 17, 20);
+position: absolute;
+bottom: 0;
+outline: none;
+color: white;
+font-size: 25px;
+padding: 10px;
+size-adjust: none;
+border: none;
+resize: none;
+}
+.html-editor textarea::selection{
+background: orange;
+
+}
+.css-editor textarea::selection{
+background: rgb(0, 136, 255);
+
+}
+.js-editor textarea::selection{
+background: rgb(214, 251, 3);
+color: black;
+
+}
+
+.output-container{
+width: 100%;
+height: auto;
+box-shadow: 2px -4px 10px rgb(50, 50, 54);
+color: rgba(255, 255, 255,0.491);
+text-transform: uppercase;
+font-size: 20px;
+z-index: 1;
+position: fixed;
+bottom: 0;
+transition: all  0.5s ease-in-out;
+}
+
+
+.output-head{
+width: 100%;
+/* height:60px; */
+background: rgb(12, 17, 20);
+display: flex;
+align-items: center;
+justify-content: right;
+gap: 20px;
+padding: 20px;
+color: gray;
+}
+
+.output-head img{
+/* color: rgb(179, 166, 166); */
+font-size: 25px;
+transition: all 0.5s ease-in-out;
+}
+.output-head img:hover{
+/* color: rgb(233, 226, 226); */
+font-size: 20px;
+scale: 150%;
+cursor: pointer;
+}
+
+#output{
+width: 100%;
+height: calc(100% - 60px);
+background: rgb(254, 254, 254);
+/* overflow: hidden; */
+}
+
+
+.output-full-active{
+height: 100%;
+background: #ffffff;
+}
